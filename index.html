@@ -26,11 +26,18 @@
             background-color: #0066cc;
             padding: 10px;
         }
-        .logo {
+        .logo-placeholder {
             width: 60px;
             height: 60px;
-            object-fit: contain;
+            background-color: #ffffff;
+            color: #0066cc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.8em;
             margin-right: 10px;
+            border-radius: 5px;
         }
         .title-location {
             flex-grow: 1;
@@ -91,7 +98,7 @@
 <body>
     <div class="job-teaser">
         <div class="header">
-            <img src="JOB_TEASER_LOGO_URL" alt="Job Teaser Logo" class="logo">
+            <div class="logo-placeholder">Your Logo</div>
             <div class="title-location">
                 <h1 class="job-title">Revolutionize Your Recruiting</h1>
                 <div class="subtitle">with Job Teasers</div>
@@ -176,7 +183,8 @@
         document.querySelector('.job-teaser').addEventListener('mouseleave', startAutoSwitch);
     </script>
 </body>
-</html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
