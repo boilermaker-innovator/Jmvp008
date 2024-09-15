@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Job Teaser Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minimal Job Teaser Creator</h1>
+    
+    <form id="jobTeaserForm">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required>
+        <br><br>
+        <button type="submit">Create Teaser</button>
+    </form>
+
+    <div id="outputContainer" style="display:none;">
+        <h2>Generated Teaser:</h2>
+        <div id="teaserOutput"></div>
+    </div>
+
+    <script>
+    document.getElementById('jobTeaserForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var jobTitle = document.getElementById('jobTitle').value;
+        var teaserContent = `Job Teaser for: ${jobTitle}`;
+        document.getElementById('teaserOutput').textContent = teaserContent;
+        document.getElementById('outputContainer').style.display = 'block';
+    });
+    </script>
+</body>
+</html>
