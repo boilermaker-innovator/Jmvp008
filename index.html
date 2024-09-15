@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Software Engineer - TechCorp Solutions</title>
+    <title>Job Teaser</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,44 +14,31 @@
             padding: 10px;
         }
         .job-teaser {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
             border: 2px solid #0066cc;
+            border-radius: 10px;
+            overflow: hidden;
         }
         .header {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px;
             display: flex;
             align-items: center;
-            background-color: #0066cc;
-            padding: 10px;
         }
-        .logo-placeholder {
-            width: 60px;
-            height: 60px;
-            background-color: #ffffff;
+        .logo {
+            background-color: white;
             color: #0066cc;
+            width: 50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-weight: bold;
-            font-size: 0.8em;
-            margin-right: 10px;
             border-radius: 5px;
-            text-align: center;
-        }
-        .title-location {
-            flex-grow: 1;
+            margin-right: 10px;
         }
         .job-title {
-            color: white;
             font-size: 1.2em;
             font-weight: bold;
-            margin: 0 0 5px 0;
-        }
-        .subtitle {
-            color: #e0e0e0;
-            font-size: 0.9em;
         }
         .tabs {
             display: flex;
@@ -62,131 +49,96 @@
             cursor: pointer;
             flex-grow: 1;
             text-align: center;
-            transition: background-color 0.3s, opacity 0.3s;
         }
         .tab.active {
-            background-color: #fff;
+            background-color: white;
             font-weight: bold;
         }
         .content {
             padding: 15px;
+        }
+        .section {
             display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
         }
-        .content.active {
+        .section.active {
             display: block;
-            opacity: 1;
         }
-        .apply-button {
+        .seek-button {
             display: block;
             width: 100%;
-            padding: 12px;
-            background-color: #0066cc;
+            padding: 15px;
+            background-color: #e60278;
             color: white;
             text-align: center;
             text-decoration: none;
             font-weight: bold;
-            border: none;
             font-size: 1.1em;
-        }
-        .emoticon {
-            font-size: 1.2em;
-            margin-right: 5px;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="job-teaser">
         <div class="header">
-            <div class="logo-placeholder">TechCorp</div>
-            <div class="title-location">
-                <h1 class="job-title">Senior Software Engineer</h1>
-                <div class="subtitle">San Francisco, CA (Remote Available)</div>
+            <div class="logo">Logo</div>
+            <div>
+                <div class="job-title">Promote your Job Ads</div>
+                <div>with Job Teasers</div>
             </div>
         </div>
         <div class="tabs">
-            <div class="tab active" onclick="openTab(event, 'overview')">Overview</div>
-            <div class="tab" onclick="openTab(event, 'requirements')">Requirements</div>
-            <div class="tab" onclick="openTab(event, 'benefits')">Benefits</div>
-            <div class="tab" onclick="openTab(event, 'notes')">Notes</div>
+            <div class="tab active" onclick="showTab('overview')">Overview</div>
+            <div class="tab" onclick="showTab('requirements')">Requirements</div>
+            <div class="tab" onclick="showTab('benefits')">Benefits</div>
+            <div class="tab" onclick="showTab('notes')">Notes</div>
         </div>
-        <div id="overview" class="content active">
-            <p><span class="emoticon">🚀</span> <strong>Company:</strong> TechCorp Solutions</p>
-            <p><span class="emoticon">💼</span> <strong>Position:</strong> Senior Software Engineer</p>
-            <p><span class="emoticon">📍</span> <strong>Location:</strong> San Francisco, CA (Remote Available)</p>
-            <p><span class="emoticon">💻</span> <strong>Job Type:</strong> Full-time</p>
-            <p><span class="emoticon">📝</span> <strong>Description:</strong> Join our innovative team developing cutting-edge cloud solutions. You'll be working on scalable, distributed systems that power businesses worldwide.</p>
+        <div class="content">
+            <div id="overview" class="section active">
+                <p>Company: [Company Name]</p>
+                <p>Position: [Job Title]</p>
+                <p>Location: [City, State]</p>
+                <p>Experience: [Required years]</p>
+            </div>
+            <div id="requirements" class="section">
+                <ul>
+                    <li>[Requirement 1]</li>
+                    <li>[Requirement 2]</li>
+                    <li>[Requirement 3]</li>
+                </ul>
+            </div>
+            <div id="benefits" class="section">
+                <ul>
+                    <li>[Benefit 1]</li>
+                    <li>[Benefit 2]</li>
+                    <li>[Benefit 3]</li>
+                </ul>
+            </div>
+            <div id="notes" class="section">
+                <p>[Additional Information]</p>
+                <p>Contact: carrier@exsample.com</p>
+            </div>
         </div>
-        <div id="requirements" class="content">
-            <ul>
-                <li><span class="emoticon">🎓</span> BS/MS in Computer Science or related field</li>
-                <li><span class="emoticon">⏳</span> 5+ years of professional software development experience</li>
-                <li><span class="emoticon">☁️</span> Strong background in cloud technologies (AWS, Azure, or GCP)</li>
-                <li><span class="emoticon">🔧</span> Proficiency in at least one: Java, Python, or Go</li>
-                <li><span class="emoticon">🗃️</span> Experience with distributed systems and databases</li>
-            </ul>
-        </div>
-        <div id="benefits" class="content">
-            <ul>
-                <li><span class="emoticon">💰</span> Competitive salary and equity package</li>
-                <li><span class="emoticon">🏥</span> Comprehensive health, dental, and vision insurance</li>
-                <li><span class="emoticon">🏖️</span> Unlimited PTO policy</li>
-                <li><span class="emoticon">📚</span> Professional development budget</li>
-                <li><span class="emoticon">🏋️</span> Wellness program and gym membership</li>
-            </ul>
-        </div>
-        <div id="notes" class="content">
-            <p><span class="emoticon">🌟</span> We value diversity and are an equal opportunity employer</p>
-            <p><span class="emoticon">🚀</span> Fast-paced, innovative work environment</p>
-            <p><span class="emoticon">🌱</span> Opportunities for growth and leadership</p>
-            <p><span class="emoticon">📧</span> For more details or to apply, contact our carrier at: carrier@exsample.com</p>
-        </div>
-        <a href="mailto:carrier@exsample.com" class="apply-button" target="_blank"><span class="emoticon">🚀</span> Apply Now</a>
+        <a href="https://www.seek.com.au/Boilermaker-jobs/in-Kalgoorlie-WA-6430" class="seek-button" target="_blank">Apply on Seek</a>
     </div>
 
     <script>
-        let currentTab = 0;
-        const tabs = ['overview', 'requirements', 'benefits', 'notes'];
-        let intervalId;
-
-        function openTab(evt, tabName) {
-            clearInterval(intervalId);
-            showTab(tabName);
-            startAutoSwitch();
-        }
-
         function showTab(tabName) {
-            var i, content, tabLinks;
-            content = document.getElementsByClassName("content");
-            for (i = 0; i < content.length; i++) {
-                content[i].className = content[i].className.replace(" active", "");
+            // Hide all sections
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
             }
-            tabLinks = document.getElementsByClassName("tab");
-            for (i = 0; i < tabLinks.length; i++) {
-                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            // Show the selected section
+            document.getElementById(tabName).classList.add('active');
+            
+            // Update tab styles
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
             }
-            document.getElementById(tabName).className += " active";
-            document.querySelector(`.tab:nth-child(${tabs.indexOf(tabName) + 1})`).className += " active";
+            event.currentTarget.classList.add('active');
         }
-
-        function autoSwitchTab() {
-            currentTab = (currentTab + 1) % tabs.length;
-            showTab(tabs[currentTab]);
-        }
-
-        function startAutoSwitch() {
-            intervalId = setInterval(autoSwitchTab, 5000); // Switch every 5 seconds
-        }
-
-        // Start the auto-switching when the page loads
-        startAutoSwitch();
-
-        // Pause auto-switching when the user hovers over the teaser
-        document.querySelector('.job-teaser').addEventListener('mouseenter', () => clearInterval(intervalId));
-
-        // Resume auto-switching when the user's mouse leaves the teaser
-        document.querySelector('.job-teaser').addEventListener('mouseleave', startAutoSwitch);
     </script>
 </body>
 </html>
