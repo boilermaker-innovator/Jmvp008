@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolutionize Your Recruiting with Job Teasers</title>
+    <title>Senior Software Engineer - TechCorp Solutions</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,6 +38,7 @@
             font-size: 0.8em;
             margin-right: 10px;
             border-radius: 5px;
+            text-align: center;
         }
         .title-location {
             flex-grow: 1;
@@ -98,50 +99,55 @@
 <body>
     <div class="job-teaser">
         <div class="header">
-            <div class="logo-placeholder">Your Logo</div>
+            <div class="logo-placeholder">TechCorp</div>
             <div class="title-location">
-                <h1 class="job-title">Revolutionize Your Recruiting</h1>
-                <div class="subtitle">with Job Teasers</div>
+                <h1 class="job-title">Senior Software Engineer</h1>
+                <div class="subtitle">San Francisco, CA (Remote Available)</div>
             </div>
         </div>
         <div class="tabs">
             <div class="tab active" onclick="openTab(event, 'overview')">Overview</div>
+            <div class="tab" onclick="openTab(event, 'requirements')">Requirements</div>
             <div class="tab" onclick="openTab(event, 'benefits')">Benefits</div>
-            <div class="tab" onclick="openTab(event, 'features')">Features</div>
             <div class="tab" onclick="openTab(event, 'notes')">Notes</div>
         </div>
         <div id="overview" class="content active">
-            <p><span class="emoticon">🚀</span> <strong>Product:</strong> Job Teasers</p>
-            <p><span class="emoticon">🎯</span> <strong>Target:</strong> Recruiters and HR Professionals</p>
-            <p><span class="emoticon">💼</span> <strong>Purpose:</strong> Streamline recruitment process</p>
-            <p><span class="emoticon">📈</span> <strong>Result:</strong> Higher quality candidates, faster</p>
+            <p><span class="emoticon">🚀</span> <strong>Company:</strong> TechCorp Solutions</p>
+            <p><span class="emoticon">💼</span> <strong>Position:</strong> Senior Software Engineer</p>
+            <p><span class="emoticon">📍</span> <strong>Location:</strong> San Francisco, CA (Remote Available)</p>
+            <p><span class="emoticon">💻</span> <strong>Job Type:</strong> Full-time</p>
+            <p><span class="emoticon">📝</span> <strong>Description:</strong> Join our innovative team developing cutting-edge cloud solutions. You'll be working on scalable, distributed systems that power businesses worldwide.</p>
+        </div>
+        <div id="requirements" class="content">
+            <ul>
+                <li><span class="emoticon">🎓</span> BS/MS in Computer Science or related field</li>
+                <li><span class="emoticon">⏳</span> 5+ years of professional software development experience</li>
+                <li><span class="emoticon">☁️</span> Strong background in cloud technologies (AWS, Azure, or GCP)</li>
+                <li><span class="emoticon">🔧</span> Proficiency in at least one: Java, Python, or Go</li>
+                <li><span class="emoticon">🗃️</span> Experience with distributed systems and databases</li>
+            </ul>
         </div>
         <div id="benefits" class="content">
             <ul>
-                <li><span class="emoticon">⏱️</span> Reduce time-to-hire by up to 50%</li>
-                <li><span class="emoticon">👥</span> Increase candidate engagement by 30%</li>
-                <li><span class="emoticon">🎯</span> Attract more qualified applicants</li>
-            </ul>
-        </div>
-        <div id="features" class="content">
-            <ul>
-                <li><span class="emoticon">🖥️</span> Easy-to-use, interactive design</li>
-                <li><span class="emoticon">🌐</span> Shareable across all social platforms</li>
-                <li><span class="emoticon">🎨</span> Fully customizable to match your brand</li>
-                <li><span class="emoticon">📝</span> Personal notes section for unique details</li>
+                <li><span class="emoticon">💰</span> Competitive salary and equity package</li>
+                <li><span class="emoticon">🏥</span> Comprehensive health, dental, and vision insurance</li>
+                <li><span class="emoticon">🏖️</span> Unlimited PTO policy</li>
+                <li><span class="emoticon">📚</span> Professional development budget</li>
+                <li><span class="emoticon">🏋️</span> Wellness program and gym membership</li>
             </ul>
         </div>
         <div id="notes" class="content">
-            <p><span class="emoticon">💡</span> Add personal touches to your job listings</p>
-            <p><span class="emoticon">🌟</span> Highlight unique aspects of your company culture</p>
-            <p><span class="emoticon">📌</span> Include any additional important information</p>
+            <p><span class="emoticon">🌟</span> We value diversity and are an equal opportunity employer</p>
+            <p><span class="emoticon">🚀</span> Fast-paced, innovative work environment</p>
+            <p><span class="emoticon">🌱</span> Opportunities for growth and leadership</p>
+            <p><span class="emoticon">📧</span> For more details or to apply, contact our carrier at: carrier@exsample.com</p>
         </div>
-        <a href="SIGN_UP_LINK" class="apply-button" target="_blank"><span class="emoticon">🚀</span> Start Creating Job Teasers Now</a>
+        <a href="mailto:carrier@exsample.com" class="apply-button" target="_blank"><span class="emoticon">🚀</span> Apply Now</a>
     </div>
 
     <script>
         let currentTab = 0;
-        const tabs = ['overview', 'benefits', 'features', 'notes'];
+        const tabs = ['overview', 'requirements', 'benefits', 'notes'];
         let intervalId;
 
         function openTab(evt, tabName) {
@@ -183,6 +189,7 @@
         document.querySelector('.job-teaser').addEventListener('mouseleave', startAutoSwitch);
     </script>
 </body>
+</html>
 </html>
 <!DOCTYPE html>
 <html lang="en">
