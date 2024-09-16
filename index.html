@@ -149,22 +149,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Teaser Creator</title>
     <style>
-        /* Your original styles here - unchanged */
+        /* Your existing styles here */
     </style>
 </head>
 <body>
     <h1>Job Teaser Creator</h1>
     
     <div class="description">
-        <p>Welcome to the Job Teaser Creator. This tool helps you prepare job information for AI-assisted teaser creation. Here's how it works:</p>
-        <ol>
-            <li>Review the pre-filled information in all fields</li>
-            <li>Edit any field if necessary</li>
-            <li>Click "Prepare for AI" to format the content</li>
-            <li>Use the "Copy to Clipboard" button to copy the prepared content</li>
-            <li>Click on ChatGPT or Claude button to open your preferred AI tool</li>
-            <li>Paste the copied content into the AI tool to generate your job teaser</li>
-        </ol>
+        <!-- Your existing description here -->
     </div>
 
     <form id="jobTeaserForm">
@@ -174,7 +166,7 @@
         <label for="logoUrl">Company Logo URL (Editable):</label>
         <input type="text" id="logoUrl" name="logoUrl" value="https://imgur.com/QOt9axm.png">
 
-        <label for="fullJobAd">Full Job Ad (Review and edit if needed):</label>
+        <label for="fullJobAd">Paste Full Job Ad Here:</label>
         <textarea id="fullJobAd" name="fullJobAd" required>
 OHLMEC provides project management and consulting, specialised maintenance, fabrication on and off site, construction support and structural integrity maintenance and repairs to a variety of clients across Western Australia.
 We operate under our Four Core Values;
@@ -207,171 +199,18 @@ If you are interested in taking the next step in your career or simply feel like
 
         <label for="jobTeaserTemplate">Job Teaser Template (Editable):</label>
         <textarea id="jobTeaserTemplate" name="jobTeaserTemplate" required>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Teaser | COMPANY_NAME - JOB_TITLE</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 5px;
-            background-color: #f0f0f0;
-        }
-        .job-teaser {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border: 2px solid #0066cc;
-        }
-        .header {
-            background-color: #0066cc;
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .logo {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            margin-right: 20px;
-        }
-        .job-title {
-            margin: 0;
-            font-size: 24px;
-        }
-        .location {
-            margin-top: 5px;
-            font-size: 16px;
-        }
-        .content {
-            padding: 20px;
-        }
-        .tabs {
-            display: flex;
-            border-bottom: 1px solid #ddd;
-        }
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            background-color: #f8f9fa;
-            border: none;
-            outline: none;
-        }
-        .tab.active {
-            background-color: #fff;
-            border-bottom: 2px solid #0066cc;
-        }
-        .tab-content {
-            display: none;
-            padding: 20px 0;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .apply-button {
-            display: inline-block;
-            background-color: #0066cc;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="job-teaser">
-        <div class="header">
-            <img src="LOGO_URL" alt="COMPANY_NAME Logo" class="logo">
-            <div>
-                <h1 class="job-title">JOB_TITLE</h1>
-                <div class="location">📍 LOCATION</div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="tabs">
-                <button class="tab active" onclick="openTab(event, 'about')">About</button>
-                <button class="tab" onclick="openTab(event, 'responsibilities')">Responsibilities</button>
-                <button class="tab" onclick="openTab(event, 'requirements')">Requirements</button>
-                <button class="tab" onclick="openTab(event, 'benefits')">Benefits</button>
-            </div>
-
-            <div id="about" class="tab-content active">
-                <h2>About the Role</h2>
-                <p>BRIEF_DESCRIPTION</p>
-            </div>
-
-            <div id="responsibilities" class="tab-content">
-                <h2>Key Responsibilities</h2>
-                <ul>
-                    <li>RESPONSIBILITY_1</li>
-                    <li>RESPONSIBILITY_2</li>
-                    <li>RESPONSIBILITY_3</li>
-                </ul>
-            </div>
-
-            <div id="requirements" class="tab-content">
-                <h2>Requirements</h2>
-                <ul>
-                    <li>REQUIREMENT_1</li>
-                    <li>REQUIREMENT_2</li>
-                    <li>REQUIREMENT_3</li>
-                </ul>
-            </div>
-
-            <div id="benefits" class="tab-content">
-                <h2>Benefits</h2>
-                <ul>
-                    <li>BENEFIT_1</li>
-                    <li>BENEFIT_2</li>
-                    <li>BENEFIT_3</li>
-                </ul>
-            </div>
-
-            <a href="JOB_AD_URL" class="apply-button" target="_blank">Apply Now</a>
-        </div>
-    </div>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabContent, tabLinks;
-            tabContent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabContent.length; i++) {
-                tabContent[i].style.display = "none";
-            }
-            tabLinks = document.getElementsByClassName("tab");
-            for (i = 0; i < tabLinks.length; i++) {
-                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
-</body>
-</html>
+        <!-- Your existing Job Teaser Template HTML here -->
         </textarea>
 
         <button type="submit">Prepare for AI</button>
     </form>
 
     <div id="outputContainer" style="display:none;">
-        <div class="action-buttons">
-            <button id="copyButton" class="action-button">Copy to Clipboard</button>
-            <a href="https://chat.openai.com" class="action-button ai-button" target="_blank">ChatGPT</a>
-            <a href="https://claude.ai" class="action-button ai-button" target="_blank">Claude</a>
-            <button id="viewSnippetsButton" class="action-button">View Code Snippets</button>
-        </div>
-        <div id="teaserOutput"></div>
+        <!-- Your existing output container content here -->
     </div>
 
     <script>
-    // Your original JavaScript here - unchanged
+    // Your existing JavaScript here
     </script>
 </body>
 </html>
