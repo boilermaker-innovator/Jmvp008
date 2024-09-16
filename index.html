@@ -457,7 +457,7 @@ If you are interested in taking the next step in your career or simply feel like
 </html>
         </textarea>
 
-        <button type="submit">Prepare for AI</button>
+        <button type="button" id="prepareButton">Prepare for AI</button>
     </form>
 
     <div id="outputContainer" style="display:none;">
@@ -472,8 +472,15 @@ If you are interested in taking the next step in your career or simply feel like
 
     <script>
     (function() {
-        document.getElementById('jobTeaserForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        document.getElementById('clearFormButton').addEventListener('click', function() {
+            document.getElementById('jobAdUrl').value = '';
+            document.getElementById('logoUrl').value = '';
+            document.getElementById('fullJobAd').value = '';
+            document.getElementById('jobTeaserTemplate').value = '';
+            document.getElementById('outputContainer').style.display = 'none';
+        });
+
+        document.getElementById('prepareButton').addEventListener('click', function() {
             var jobAdUrl = document.getElementById('jobAdUrl').value;
             var logoUrl = document.getElementById('logoUrl').value;
             var fullJobAd = document.getElementById('fullJobAd').value;
@@ -508,10 +515,4 @@ Instructions for AI:
    - JOB_AD_URL (use the provided Job Ad URL for the "Apply Now" button)
 6. Maintain the existing JavaScript for tab functionality.
 7. Keep the content concise, engaging, and tailored to attract qualified candidates.
-8. Maintain the overall structure and styling of the template, but feel free to enhance it if necessary.
-9. Ensure the final output is a complete, valid HTML document that can be opened directly in a web browser.
-10. Do not include any explanatory text or markdown outside of the HTML structure.
-
-Your response should start with <!DOCTYPE html> and end with </html>, containing only the HTML code for the interactive job teaser.`;
-
-            document.getElementById('teaserOutput').textContent = jobTeaserContent;
+8. Maintain the overall structure and styling of the template, but feel free to enhance it
